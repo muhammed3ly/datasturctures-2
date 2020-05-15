@@ -68,7 +68,7 @@ void BST<T>::insert(TreeNode<T>* startNode, TreeNode<T>* newNode)
 		}
 		else
 		{
-			if (current->left)
+			if (current->left == nullptr)
 			{
 				current->left = newNode;
 				return;

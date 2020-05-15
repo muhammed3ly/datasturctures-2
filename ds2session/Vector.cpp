@@ -36,6 +36,20 @@ void Vector<T>::pop_back()
 }
 
 template<class T>
+T Vector<T>::back()
+{
+	assert(empty() == false);
+	return arr[sz - 1];
+}
+
+template<class T>
+T& Vector<T>::operator[](int index)
+{
+	assert(index >= 0 && index < sz);
+	return arr[index];
+}
+
+template<class T>
 Vector<T>::Vector()
 {
 	sz = 0;
@@ -53,4 +67,24 @@ Vector<T>::Vector(int s)
 		capacity *= 2;
 	}
 	arr = new T[capacity];
+}
+
+template<class T>
+Vector<T>::Vector(int s, T val)
+{
+	sz = s;
+	capacity = 1;
+	while (capacity < sz)
+	{
+		capacity *= 2;
+	}
+	arr = new T[capacity];
+	for (int i = 0; i < sz; i++)
+		arr[i] = val;
+}
+
+template<class T>
+Vector<T>::~Vector()
+{
+	delete[] arr;
 }

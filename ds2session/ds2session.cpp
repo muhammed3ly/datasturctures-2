@@ -1,13 +1,18 @@
 #include <iostream>
-#include "Vector.h"
-#include "Vector.cpp"
-#include <vector>
+#include "BST.h"
+#include "BST.cpp"
 using namespace std;
 int main()
 {
-	Vector<int> v(5, 100);
-	for (int i = 0; i < v.size(); i++)
-		cout << v[i] << ' ';
-
+	BST<int> tree;
+	tree.insert(7);
+	tree.insert(5);
+	tree.insert(9);
+	tree.insert(8);
+	tree.insert(100);
+	if (tree.find(8) == true)
+		cout << "eshta 3alena";
+	else
+		cout << "yalahwy";
 	return 0;
 }

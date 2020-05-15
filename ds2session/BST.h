@@ -9,6 +9,8 @@ private:
 	int sz;
 public:
 	void insert(T val);
+	void insert(TreeNode<T>* startNode, TreeNode<T>* newNode);
 	bool find(T val);
+	void remove(T val);
 	BST();
 };

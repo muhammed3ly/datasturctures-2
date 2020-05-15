@@ -10,9 +10,11 @@ int main()
 	tree.insert(9);
 	tree.insert(8);
 	tree.insert(100);
-	if (tree.find(8) == true)
-		cout << "eshta 3alena";
+	tree.remove(9);
+	cout << "5alas";
+	if (tree.find(9) == true)
+		cout << "ok";
 	else
-		cout << "yalahwy";
+		cout << "no";
 	return 0;
 }

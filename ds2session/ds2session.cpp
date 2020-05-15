@@ -11,7 +11,6 @@ int main()
 	tree.insert(8);
 	tree.insert(100);
 	tree.remove(9);
-	cout << "5alas";
 	if (tree.find(9) == true)
 		cout << "ok";
 	else

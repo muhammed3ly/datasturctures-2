@@ -144,6 +144,7 @@ void BST<T>::remove(T val)
 			root = nullptr;
 		return;
 	}
+
 	TreeNode<T>* current = root;
 	while (true)
 	{
@@ -157,7 +158,6 @@ void BST<T>::remove(T val)
 				delete current->right;
 				if (right != nullptr)
 				{
-				cout << "5alashaa";
 					current->right = right;
 					if (left != nullptr)
 						insert(current->right, left);
